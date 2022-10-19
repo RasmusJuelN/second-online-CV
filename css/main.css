@@ -37,7 +37,7 @@ html, body {
 }
 
 .background:first-child {
-  background-image: url(https://github.com/RasmusJuelN/OnlineCV/blob/master/images/573231.jpg?raw=true);
+  background-image: url(https://github.com/RasmusJuelN/rasmusjueln.github.io/blob/master/images/573231.jpg?raw=true);
   -webkit-transform: translateY(-15vh);
   transform: translateY(-15vh);
 }
@@ -48,7 +48,7 @@ html, body {
 }
 
 .background:nth-child(2) {
-  background-image: url(https://github.com/RasmusJuelN/OnlineCV/blob/master/images/walk.jpg?raw=true);
+  background-image: url(https://github.com/RasmusJuelN/rasmusjueln.github.io/blob/master/images/walk.jpg?raw=true);
 }
 
 .background:nth-child(3) {
@@ -56,11 +56,11 @@ html, body {
 }
 
 .background:nth-child(4) {
-  background-image: url(https://github.com/RasmusJuelN/rasmusjueln.github.io/blob/master/images/cave.jpg?raw=true);
+  background-image: url(https://github.com/RasmusJuelN/rasmusjueln.github.io/blob/master/images/walk.jpg?raw=true);
 }
 
 .background:nth-child(5) {
-  background-image: url(https://github.com/RasmusJuelN/OnlineCV/blob/master/images/skyscraper.jpg?raw=true);
+  background-image: url(https://github.com/RasmusJuelN/rasmusjueln.github.io/blob/master/images/skyscraper.jpg?raw=true);
 }
 
 /* Set stacking context of slides */
