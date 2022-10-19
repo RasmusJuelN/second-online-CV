@@ -40,7 +40,6 @@ html, body {
   background-image: url(https://github.com/RasmusJuelN/rasmusjueln.github.io/blob/master/images/573231.jpg?raw=true);
   -webkit-transform: translateY(-15vh);
   transform: translateY(-15vh);
-  z-index: 5;
 }
 
 .background:first-child .content-wrapper {
@@ -50,21 +49,38 @@ html, body {
 
 .background:nth-child(2) {
   background-image: url(https://github.com/RasmusJuelN/rasmusjueln.github.io/blob/master/images/walk.jpg?raw=true);
-  z-index: 4;
 }
 
 .background:nth-child(3) {
   background-image: url(https://i.postimg.cc/TY0xQ41T/photo-1433840496881-cbd845929862.jpg);
-  z-index: 3;
 }
 
 .background:nth-child(4) {
   background-image: url(https://github.com/RasmusJuelN/rasmusjueln.github.io/blob/master/images/cave.jpg?raw=true);
-  z-index: 2;
 }
 
 .background:nth-child(5) {
   background-image: url(https://github.com/RasmusJuelN/rasmusjueln.github.io/blob/master/images/skyscraper.jpg?raw=true);
+}
+
+/* Set stacking context of slides */
+.background:nth-child(1) {
+  z-index: 5;
+}
+
+.background:nth-child(2) {
+  z-index: 4;
+}
+
+.background:nth-child(3) {
+  z-index: 3;
+}
+
+.background:nth-child(4) {
+  z-index: 2;
+}
+
+.background:nth-child(5) {
   z-index: 1;
 }
 
@@ -641,4 +657,127 @@ a:hover {
   .card__snippet {
     margin: 40px 0;
   }
+}
+
+.timeline-container {
+  position: absolute;
+  left: 10%;
+  bottom: 5%;
+  height: 20%;
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.295);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+#lineCont {
+  width: 100%;
+  height: 20%;
+}
+
+#line {
+  height: 7px;
+  width: 80%;
+  background: white;
+  border-radius: 5px;
+  margin: 0 auto;
+  top: 50%;
+  position: relative;
+}
+
+#span {
+  display: none;
+  width: 70%;
+  margin: auto;
+  margin-top: 25%;
+  text-align: center;
+  color: white;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background: #ff7f7f;
+  border-radius: 15px;
+  position: absolute;
+  top: -9px;
+  border: 3px solid white;
+}
+
+.circle:before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: white;
+  position: absolute;
+  border-radius: 100%;
+  top: 25%;
+  left: 25%;
+  display: none;
+}
+
+.circle .popupSpan {
+  width: auto;
+  height: auto;
+  padding: 10px;
+  white-space: nowrap;
+  display: inline-block;
+  color: white;
+  position: absolute;
+  top: 10px;
+  left: -75px;
+  display: none;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.circle.hover:before, .circle.active:before {
+  display: block;
+}
+
+.circle.hover .popupSpan, .circle.active .popupSpan {
+  display: block;
+}
+
+.circle.active .popupSpan {
+  top: -40px;
+}
+
+#mainCont {
+  height: 80%;
+  width: 100%;
+  position: relative;
+  color: white;
+  font-size: 4vh;
+  text-align: center;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+#mainCont span {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 30%;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+#mainCont span.right {
+  left: 200%;
+}
+
+#mainCont span.center {
+  left: 0% !important;
+}
+
+#mainCont span.left {
+  left: -100%;
 }
