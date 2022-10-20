@@ -601,7 +601,7 @@ a:hover {
 .card__caption {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, rgba(0, 0, 0, 0.4)), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 255, 0) 100%);
-  font-size: 3vh;
+  font-size: 2.5vh;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -640,19 +640,6 @@ a:hover {
   -webkit-box-orient: vertical;
 }
 
-.card__snippet {
-  display: -webkit-box;
-  max-height: 150px;
-  overflow: hidden;
-  font-size: 16px;
-  line-height: 20px;
-  text-overflow: ellipsis;
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
-}
-
 @media (min-width: 900px) {
   .card__snippet {
     margin: 40px 0;
@@ -665,7 +652,6 @@ a:hover {
   bottom: 5%;
   height: 20%;
   width: 80%;
-  background-color: rgba(0, 0, 0, 0.295);
 }
 
 a {
@@ -678,7 +664,7 @@ li {
 
 #lineCont {
   width: 100%;
-  height: 20%;
+  height: 10%;
 }
 
 #line {
@@ -687,7 +673,7 @@ li {
   background: white;
   border-radius: 5px;
   margin: 0 auto;
-  top: 50%;
+  top: 0;
   position: relative;
 }
 
@@ -695,9 +681,17 @@ li {
   display: none;
   width: 70%;
   margin: auto;
-  margin-top: 25%;
   text-align: center;
   color: white;
+}
+
+#headertext {
+  margin: 0;
+  font-size: 3vh;
+}
+
+#subtext {
+  font-size: 2vh;
 }
 
 .circle {
@@ -730,8 +724,8 @@ li {
   display: inline-block;
   color: white;
   position: absolute;
-  top: 10px;
-  left: -75px;
+  top: 15px;
+  left: -250%;
   display: none;
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;

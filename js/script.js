@@ -64,6 +64,9 @@ function previousItem() {
   $currentSlide.removeClass("down-scroll").addClass("up-scroll");
 }
 
+
+  // Custon Cursor on mousemove
+
  document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
         t.style.left = n.clientX + "px", 
 		t.style.top = n.clientY + "px", 
@@ -90,7 +93,7 @@ function previousItem() {
     } 
 
 
-
+// Mouse hover effect
 
     document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
   t.style.left = n.clientX + "px", 
@@ -117,8 +120,15 @@ function previousItem() {
       t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
   } 
 
+
+
+  // Timeline
+
   //Sample dates
-var dates = ["04/21/2021", "11/11/2021", "04/04/2022", "06/27/2022", "01/16/2023", "04/27/2026"];
+var dates = ["04/21/2021", "11/11/2021", "04/04/2022", "06/27/2022", "01/16/2023", "04/01/2023", "10/23/2023", "01/13/2024", "08/05/2024", "10/12/2024", "04/07/2025", "06/28/2025", "01/26/2026",  "04/27/2026"];
+var textStrings = ['<h1 id="headertext">SPK1</h1><p id="subtext">C# Cases - Object oriented programming<br>Linux Environment - CentOS 8<br>Cisco Course - Routing and Switching Essentials<br>Website - HTML, CSS & BootStrap</p>',
+'<h1 id="headertext">Primary Course 1</h1><p id="subtext">Object oriented programming - Advanced<br>Clientside Programming - HTML, CSS<br>Database Programming - MS SQL<br></p>',
+  "3", "4", "5", "6", "7", "8", "9", "10", "11"];
 //For the purpose of stringifying MM/DD/YYYY date format
 var monthSpan = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
@@ -139,11 +149,15 @@ function dateSpan(date) {
 //Main function. Draw your circles.
 function makeCircles() {
   //Forget the timeline if there's only one date. Who needs it!?
-  if (dates.length < 2) {
+  if (dates.length < 2)
+   {
     $("#line").hide();
     $("#span").show().text(dateSpan(dates[0]));
     //This is what you really want.
-  } else if (dates.length >= 2) {
+  } 
+
+  else if (dates.length >= 2) 
+  {
     //Set day, month and year variables for the math
     var first = dates[0];
     var last = dates[dates.length - 1];
@@ -159,35 +173,57 @@ function makeCircles() {
     
 
     //Integer representation of the last day. The first day is represnted as 0
-    var lastInt = ((lastMonth - firstMonth) *30) + ((lastDay - firstDay)*10) + ((lastYear - firstYear)*2000);
+    var lastInt = ((lastMonth - firstMonth) *30) + ((lastDay - firstDay)) + ((lastYear - firstYear)*365);
 
     //Draw first date circle
     $("#line").append('<div class="circle" id="circle0" style="left: ' + 0 + '%;"><div class="popupSpan">' + dateSpan(dates[0]) + '</div></div>');
     
-    $("#mainCont").append('<span id="span0" class="center">' + dateSpan(dates[0]) + '</span>');
-
+    $("#mainCont").append('<span id="span0" class="center";>' + '<h1 id="headertext">Basic Course, Frederiksberg.</h1><p id="subtext">Basic Programming - C#<br>Computersience - Operating systems, servers & security<br>Network - Cisco CCNA, subnetting & setting up LAN (IPv4 & IPv6).</p>' + '</span>');
+            // var text1 = $("#mainCont").append('<span id="span1" class="center";> <h1 id="headertext">SPK1</h1><p id="subtext">C# Cases - Object oriented programming<br>Linux Environment - CentOS 8<br>Cisco Course - Routing and Switching Essentials<br>Website - HTML, CSS & BootStrap</p> </span>');
     //Loop through middle dates
     for (i = 1; i < dates.length - 1; i++) {
+      
       var thisMonth = parseInt(dates[i].split('/')[0]);
       var thisDay = parseInt(dates[i].split('/')[1]);
       var thisYear = parseInt(dates[i].split('/')[2]);
-
+      
       //Integer representation of the date
-      var thisInt = ((thisMonth - firstMonth)*30) + ((thisDay - firstDay)*10) + ((thisYear - firstYear)*2000);
+      var thisInt = ((thisMonth - firstMonth)*30) + ((thisDay - firstDay)) + ((thisYear - firstYear)*365);
 
       //Integer relative to the first and last dates
       var relativeInt = thisInt / lastInt;
 
       //Draw the date circle
-      $("#line").append('<div class="circle hover-target" id="circle' + i + '" style="left: ' + relativeInt * 100 + '%;"><div class="popupSpan">' + dateSpan(dates[i]) + '</div></div>');
-      
-      $("#mainCont").append('<span id="span' + i + '" class="right">' + dateSpan(dates[i]) + '</span>');
+      $("#line").append('<div class="circle" id="circle' + i + '" style="left: ' + relativeInt * 100 + '%;"><div class="popupSpan">' + dateSpan(dates[i]) + '</div></div>');
+
+      if(i === 1) {$("#mainCont").append('<span id="span' + i + '" class="right">' + textStrings[0] +'</span>');}
+      if (i === 2){$("#mainCont").append('<span id="span' + i + '" class="right">' + textStrings[1] +'</span>');}
+      if (i === 3){$("#mainCont").append('<span id="span' + i + '" class="right">' + textStrings[2] +'</span>');}
+      if (i === 4){$("#mainCont").append('<span id="span' + i + '" class="right">' + textStrings[3] +'</span>');}
+      if (i === 5){$("#mainCont").append('<span id="span' + i + '" class="right">' + textStrings[4] +'</span>');}
+      if (i === 6){$("#mainCont").append('<span id="span' + i + '" class="right">' + textStrings[5] +'</span>');}
+      if (i === 7){$("#mainCont").append('<span id="span' + i + '" class="right">' + textStrings[6] +'</span>');}
+      if (i === 8){$("#mainCont").append('<span id="span' + i + '" class="right">' + textStrings[7] +'</span>');}
+      if (i === 9){$("#mainCont").append('<span id="span' + i + '" class="right">' + textStrings[8] +'</span>');}
+      if (i === 10){$("#mainCont").append('<span id="span' + i + '" class="right">' + textStrings[9] +'</span>');}
+      if (i === 11){$("#mainCont").append('<span id="span' + i + '" class="right">' + textStrings[10] +'</span>');}
+      if (i === 12){$("#mainCont").append('<span id="span' + i + '" class="right">' + textStrings[11] +'</span>');}
+
+      // for (j = 0; j < textStrings.length; j++)
+      // {
+      // $("#mainCont").append('<span id="span' + i + '" class="right">' + textStrings[j] +'</span>');
+   
+      // }
+    
     }
 
     //Draw the last date circle
     $("#line").append('<div class="circle" id="circle' + i + '" style="left: ' + 99 + '%;"><div class="popupSpan">' + dateSpan(dates[dates.length - 1]) + '</div></div>'); 
+    // Last date text
+    $("#mainCont").append('<span id="span' + i + '" class="right">' + '<h1 id="headertext">Final apprentice test</h1>' + '</span>');
     
-    $("#mainCont").append('<span id="span' + i + '" class="right">' + dateSpan(dates[i]) + '</span>');
+
+    
   }
 
   $(".circle:first").addClass("active");
@@ -226,5 +262,3 @@ function selectDate(selector) {
     $($spanSelector).removeClass("left");
   }; 
 };
-
-console.log()
