@@ -43,7 +43,8 @@ function parallaxScroll(evt) {
 }
 
 // ------------- SET TIMEOUT TO TEMPORARILY "LOCK" SLIDES ------------- //
-function slideDurationTimeout(slideDuration) {
+function slideDurationTimeout(slideDuration) 
+{
   setTimeout(function() {
     ticking = false;
   }, slideDuration);
@@ -54,20 +55,23 @@ var mousewheelEvent = isFirefox ? "DOMMouseScroll" : "wheel";
 window.addEventListener(mousewheelEvent, _.throttle(parallaxScroll, 60), false);
 
 // ------------- SLIDE MOTION ------------- //
-function nextItem() {
+function nextItem() 
+{
   var $previousSlide = $(".background").eq(currentSlideNumber - 1);
   $previousSlide.removeClass("up-scroll").addClass("down-scroll");
 }
 
-function previousItem() {
+function previousItem() 
+{
   var $currentSlide = $(".background").eq(currentSlideNumber);
   $currentSlide.removeClass("down-scroll").addClass("up-scroll");
 }
 
 
-  // Custon Cursor on mousemove
+  // Custom Cursor
 
- document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
+ document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n)
+  {
         t.style.left = n.clientX + "px", 
 		t.style.top = n.clientY + "px", 
 		e.style.left = n.clientX + "px", 
@@ -75,17 +79,25 @@ function previousItem() {
 		i.style.left = n.clientX + "px", 
 		i.style.top = n.clientY + "px"
     });
+
     var t = document.getElementById("cursor"),
         e = document.getElementById("cursor2"),
         i = document.getElementById("cursor3");
-    function n(t) {
+        
+    function n(t) 
+    {
         e.classList.add("hover"), i.classList.add("hover")
     }
-    function s(t) {
+
+    function s(t) 
+    {
         e.classList.remove("hover"), i.classList.remove("hover")
     }
+
     s();
-    for (var r = document.querySelectorAll(".hover-target"), a = r.length - 1; a >= 0; a--) {
+
+    for (var r = document.querySelectorAll(".hover-target"), a = r.length - 1; a >= 0; a--) 
+    {
         o(r[a])
     }
     function o(t) {
@@ -93,46 +105,42 @@ function previousItem() {
     } 
 
 
-// Mouse hover effect
-
-    document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
-  t.style.left = n.clientX + "px", 
-  t.style.top = n.clientY + "px", 
-  e.style.left = n.clientX + "px", 
-  e.style.top = n.clientY + "px", 
-  i.style.left = n.clientX + "px", 
-  i.style.top = n.clientY + "px"
-  });
-  var t = document.getElementById("cursor"),
-      e = document.getElementById("cursor2"),
-      i = document.getElementById("cursor3");
-  function n(t) {
-      e.classList.add("hover"), i.classList.add("hover")
-  }
-  function s(t) {
-      e.classList.remove("hover"), i.classList.remove("hover")
-  }
-  s();
-  for (var r = document.querySelectorAll(".hover-target"), a = r.length - 1; a >= 0; a--) {
-      o(r[a])
-  }
-  function o(t) {
-      t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
-  } 
-
 
 
   // Timeline
 
   //Sample dates
 var dates = ["04/21/2021", "11/11/2021", "04/04/2022", "06/27/2022", "01/16/2023", "04/01/2023", "10/23/2023", "01/13/2024", "08/05/2024", "10/12/2024", "04/07/2025", "06/28/2025", "01/26/2026",  "04/27/2026"];
-var textStrings = ['<h1 id="headertext">SPK1</h1><p id="subtext">C# Cases - Object oriented programming<br>Linux Environment - CentOS 8<br>Cisco Course - Routing and Switching Essentials<br>Website - HTML, CSS & BootStrap</p>',
-'<h1 id="headertext">Primary Course 1</h1><p id="subtext">Object oriented programming - Advanced<br>Clientside Programming - HTML, CSS<br>Database Programming - MS SQL<br></p>',
-  "3", "4", "5", "6", "7", "8", "9", "10", "11"];
-//For the purpose of stringifying MM/DD/YYYY date format
+var textStrings = [
+'<h1 id="headertext">Practical School (1)</h1><p id="subtext">C# Cases - Object oriented programming<br>Linux Environment - CentOS 8<br>Cisco Course - Routing and Switching Essentials<br>Website - HTML, CSS & BootStrap</p>',
+
+'<h1 id="headertext">Primary Course (1)</h1><p id="subtext">Object oriented programming - Experienced<br>Clientside Programming - HTML, CSS<br>Database Programming - MS SQL</p>',
+
+'<h1 id="headertext">Practical School (2)</h1><p id="subtext">ASP .NET Core Web Application (MVC), with MS SQL Database<br>NAO Robot project - Python<br>Improving C# and Javascript skills</p>', 
+
+'<h1 id="headertext">Primary Course (2)</h1><p id="subtext">Object oriented programming - Advanced<br>Clientside Programming - Advanced<br>Database Programming - Experienced<br>Server Technology - Advanced<br>GUI Programming - Experienced</p>', 
+
+'<h1 id="headertext">Practical School (3)</h1><p id="subtext">Working with, and improving, the topics learned in Primary course (2)</p>', 
+
+'<h1 id="headertext">Primary Course (3)</h1><p id="subtext">Serverside programming - Web Applications & Web API<br>Softwaretest and security<br>GUI Programming and communication with Web-services<br>Embedded Controller - Beginner</p>',
+
+'<h1 id="headertext">Practical School (4)</h1><p id="subtext">Working with, and improving, the topics learned in Primary course (3)</p>', 
+
+'<h1 id="headertext">Primary Course (4)</h1><p id="subtext">Serverside and Asynchronous programming<br>App programming, Cross Platform and Mobile OS - Advanced<br>IT Service Management - Advanced<br>Project Management - Advanced</p>', 
+
+'<h1 id="headertext">Practical School (5)</h1><p id="subtext">Working with, and improving, the topics learned in Primary course (4)</p>', 
+
+'<h1 id="headertext">Primary Course (5)</h1><p id="subtext">System development and management - Experienced<br>Software testing and security - Advanced<br>App programming - Advanced<br>Embedded Controller - Advanced<br>Optional subject - UI Design and Math</p>',
+
+'<h1 id="headertext">Practical School (6)</h1><p id="subtext">Working with, and improving, the topics learned in Primary course (5)</p>',
+
+'<h1 id="headertext">Primary Course (6)</h1><p id="subtext">Working on final apprentice test project</p>'
+];
+
+// For the purpose of stringifying MM/DD/YYYY date format
 var monthSpan = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-//Format MM/DD/YYYY into string
+// Format MM/DD/YYYY into string
 function dateSpan(date) {
   var month = date.split('/')[0];
   month = monthSpan[month - 1];
@@ -146,14 +154,13 @@ function dateSpan(date) {
   return month + " " + day + ", " + year;
 }
 
-//Main function. Draw your circles.
+//Main function
 function makeCircles() {
-  //Forget the timeline if there's only one date. Who needs it!?
+  // No timeline if there's only one date.
   if (dates.length < 2)
    {
     $("#line").hide();
     $("#span").show().text(dateSpan(dates[0]));
-    //This is what you really want.
   } 
 
   else if (dates.length >= 2) 
@@ -177,11 +184,11 @@ function makeCircles() {
 
     //Draw first date circle
     $("#line").append('<div class="circle" id="circle0" style="left: ' + 0 + '%;"><div class="popupSpan">' + dateSpan(dates[0]) + '</div></div>');
-    
-    $("#mainCont").append('<span id="span0" class="center";>' + '<h1 id="headertext">Basic Course, Frederiksberg.</h1><p id="subtext">Basic Programming - C#<br>Computersience - Operating systems, servers & security<br>Network - Cisco CCNA, subnetting & setting up LAN (IPv4 & IPv6).</p>' + '</span>');
-            // var text1 = $("#mainCont").append('<span id="span1" class="center";> <h1 id="headertext">SPK1</h1><p id="subtext">C# Cases - Object oriented programming<br>Linux Environment - CentOS 8<br>Cisco Course - Routing and Switching Essentials<br>Website - HTML, CSS & BootStrap</p> </span>');
-    //Loop through middle dates
-    for (i = 1; i < dates.length - 1; i++) {
+
+    $("#mainCont").append('<span id="span0" class="center";>' + '<h1 id="headertext">Basic Course</h1><p id="subtext">Basic Programming - C#<br>Computersience - Operating systems, servers & security<br>Network - Cisco CCNA, subnetting & setting up LAN (IPv4 & IPv6).</p>' + '</span>');
+
+    for (i = 1; i < dates.length - 1; i++) 
+    {
       
       var thisMonth = parseInt(dates[i].split('/')[0]);
       var thisDay = parseInt(dates[i].split('/')[1]);
@@ -192,7 +199,7 @@ function makeCircles() {
 
       //Integer relative to the first and last dates
       var relativeInt = thisInt / lastInt;
-
+      
       //Draw the date circle
       $("#line").append('<div class="circle" id="circle' + i + '" style="left: ' + relativeInt * 100 + '%;"><div class="popupSpan">' + dateSpan(dates[i]) + '</div></div>');
 
