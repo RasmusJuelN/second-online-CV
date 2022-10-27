@@ -54,6 +54,14 @@ function slideDurationTimeout(slideDuration)
 var mousewheelEvent = isFirefox ? "DOMMouseScroll" : "wheel";
 window.addEventListener(mousewheelEvent, _.throttle(parallaxScroll, 60), false);
 
+$(window).scroll(function() {
+  if ($('.background').length) {
+      if ($(window).scrollTop() == 0 && e.deltaY > 0) {
+          $('.background').removeClass('scrolled');
+      }
+  }
+});
+
 // ------------- SLIDE MOTION ------------- //
 function nextItem() 
 {
@@ -66,6 +74,7 @@ function previousItem()
   var $currentSlide = $(".background").eq(currentSlideNumber);
   $currentSlide.removeClass("down-scroll").addClass("up-scroll");
 }
+
 
 
   // Custom Cursor
