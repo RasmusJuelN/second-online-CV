@@ -2,7 +2,6 @@
 html, body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
   cursor: none;
   font-family: 'Quicksand';
 }
@@ -375,7 +374,7 @@ html, body {
           box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .cursor, .cursor2, .cursor3 {
     display: none;
   }

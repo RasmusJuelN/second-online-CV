@@ -57,10 +57,11 @@ window.addEventListener(mousewheelEvent, _.throttle(parallaxScroll, 60), false);
 $(window).scroll(function() {
   if ($('.background').length) {
       if ($(window).scrollTop() == 0 && e.deltaY > 0) {
-          $('.background').removeClass('scrolled');
+          $('.background').removeClass('up-scroll');
       }
   }
 });
+
 
 // ------------- SLIDE MOTION ------------- //
 function nextItem() 
