@@ -11,7 +11,7 @@ html, body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  overflow: hidden;
+
   will-change: transform;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -58,9 +58,11 @@ html, body {
 }
 .background:nth-child(4) {
   background-image: url(https://github.com/RasmusJuelN/rasmusjueln.github.io/blob/master/images/cave.jpg?raw=true);
+  
 }
 .background:nth-child(5) {
   background-image: url(https://github.com/RasmusJuelN/rasmusjueln.github.io/blob/master/images/skyscraper.jpg?raw=true);
+  height: 140vh;
 }
 
 /* Set stacking context of slides */
@@ -244,7 +246,7 @@ text-align: right;
   top:10%;
   position : relative;
 	height: 40%;
-	width: 70%;
+	width: 50%;
 	margin : 200px auto;
   color:white;
 	background-color : rgba(51, 46, 46, 0);
@@ -257,14 +259,14 @@ text-align: right;
 .thumbnail{
   float : left;
 	position : relative ;
-	left : 10%;
+	left : -10%;
 	top : -30%;
 	height : 60vh;
 	width: 16vw;
 	-webkit-box-shadow: 10px 10px 1000px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 10px 10px 100px 0px rgba(0,0,0,0.75);
 	box-shadow: 10px 10px 100px 10px rgba(0,0,0,0.75);
-	overflow: hidden;
+
 }
 
 /*object-fit: cover;*/
@@ -287,7 +289,7 @@ text-align: right;
   letter-spacing: 2px;
   line-height: 2;
   position:absolute;
-  margin-left : 45%;
+  margin-left : 35%;
 	margin-right : 5%;
   height:100%;
 }
@@ -381,6 +383,8 @@ text-align: right;
 		display: none
 	}
 }
+
+
 a:hover{
   text-decoration: none;
   cursor:none;
@@ -515,8 +519,8 @@ a:hover{
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  height:58%;
-transform: translateY(20%);
+  height:56%;
+transform: translateY(15%);
 }
 
 .card {
@@ -649,7 +653,7 @@ width: 100%;
 .timeline-container{
   position:absolute;
   left:10%;
-  bottom:7%;
+  bottom:11%;
   height:20%;
   width: 80%;
 }
@@ -688,12 +692,14 @@ li{
 }
 
 #headertext{
+font-size: 2.7vh;
 margin:0;
-font-size: 3vh;
+padding-top:5px;
 }
 
 #subtext{
-  font-size:2vh;
+  font-size:1.8vh;
+  
 }
 .current{
   position: absolute;
@@ -773,7 +779,7 @@ font-size: 3vh;
 }
 
 #mainCont {
-  height: 80%;
+  height: 30%;
   width: 100%;
   position: relative;
   color: rgb(255, 255, 255);
