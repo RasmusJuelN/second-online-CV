@@ -145,18 +145,7 @@ html, body {
   
 }
 
-.content-title {
-  font-size: 8vh;
-  margin:0;
-  line-height: 1.4; 
-}
 
-
-.content-subtitle{
-  font-size: 3vh;
-  margin:0;
-
-}
 
 .card1{
   position: relative;
@@ -701,17 +690,23 @@ padding-top:5px;
   font-size:1.8vh;
   
 }
-.current{
+.current {
   position: absolute;
-  left:32%;
-  top:-35px;
-
+  left: 33.2%;
+  bottom:25px;
 }
+
+.current p{
+  position:relative;
+  opacity: 50%;
+  top:10px;
+}
+
 .arrow {
+  
   text-align: center;
   margin: 0;
   z-index: -10;
-
 }
 .bounce {
   -moz-animation: bounce 3s infinite;

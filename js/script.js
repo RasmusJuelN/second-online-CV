@@ -119,7 +119,7 @@ var textStrings = [
 
 '<h1 id="headertext">Primary Course (1)</h1><p id="subtext">Object oriented programming - Experienced<br>Clientside Programming - HTML, CSS<br>Database Programming - MS SQL</p>',
 
-'<h1 id="headertext">Practical School (2)</h1><p id="subtext">ASP .NET Core Web Application (MVC), with MS SQL Database<br>NAO Robot project - Python<br>Improving C# and Javascript skills</p>', 
+'<h1 id="headertext">Practical School (2)</h1><p id="subtext">ASP .NET Core Web Application (MVC), with MS SQL Database<br>NAO Robot project - Python<br>Improving C# and Javascript skills<br>WPF Application using MVVM pattern, XAML for design and SQL server for data handling</p>', 
 
 '<h1 id="headertext">Primary Course (2)</h1><p id="subtext">Object oriented programming - Advanced<br>Clientside Programming - Advanced<br>Database Programming - Experienced<br>Server Technology - Advanced<br>GUI Programming - Experienced</p>', 
 
