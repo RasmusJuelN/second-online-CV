@@ -123,7 +123,7 @@ var textStrings = [
 
 '<h1 id="headertext">Primary Course (2)</h1><p id="subtext">Object oriented programming - Advanced<br>Clientside Programming - Advanced<br>Database Programming - Experienced<br>Server Technology - Advanced<br>GUI Programming - Experienced</p>', 
 
-'<h1 id="headertext">Practical School (3)</h1><p id="subtext">Working with, and improving, the topics learned in Primary course (2)</p>', 
+'<h1 id="headertext">Practical School (3)</h1><p id="subtext">Working with, and improving, the topics learned in Primary course (2)</p><p id="subtext">Creating a music player application in Angular. It uses an API to talk to the database, and includes autherization, registration and other features.</p>', 
 
 '<h1 id="headertext">Primary Course (3)</h1><p id="subtext">Serverside programming - Web Applications & Web API<br>Softwaretest and security<br>GUI Programming and communication with Web-services<br>Embedded Controller - Beginner</p>',
 
