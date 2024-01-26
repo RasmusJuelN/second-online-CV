@@ -430,7 +430,7 @@ a:hover {
 }
 
 .card {
-  border-radius: 6%;
+  border-radius: 20px;
   width: 17%;
   height: 90%;
   margin: 0 3% 0 3%;
@@ -438,7 +438,7 @@ a:hover {
 }
 
 .card__thumb {
-  border-radius: 6%;
+  border-radius: 20px;
   margin: 0;
   width: 100%;
 }
