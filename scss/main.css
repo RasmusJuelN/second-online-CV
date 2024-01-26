@@ -583,7 +583,7 @@ li {
 
 .current {
   position: absolute;
-  left: 39.2%;
+  left: 55.2%;
   bottom: 25px;
 }
 
@@ -681,5 +681,5 @@ li {
   left: 0% !important;
 }
 #mainCont span.left {
-  left: -100%;
+  left: -200%;
 }/*# sourceMappingURL=main.css.map */
